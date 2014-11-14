@@ -11,7 +11,6 @@ End Points
 
 Search Customers
 ^^^^^^^^^^^^^^^^
-
 The endpoint returns customers for the parameters specified. 
 
 
