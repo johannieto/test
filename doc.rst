@@ -32,6 +32,7 @@ The endpoint returns customers for the parameters specified.
 **Response Example**
 
 ::
+
     [
         {
             "id":"54652afd3896ede40a000000",
