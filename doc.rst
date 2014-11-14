@@ -1,6 +1,6 @@
-================
-REST Service API
-================
+========================
+Zent.IO REST Service API
+========================
 This document provides the necessary guidelines and few examples for using the Service API.
 
 Customers End Points
@@ -395,6 +395,121 @@ The endpoint reassigns a story to another user for the parameters specified.
         "id":"546581583896ed8813000002",
     }
 
+
+
+
+Streams End Points
+==================
+
+Get Streams
+--------------
+The endpoint returns streams for the parameters specified. 
+
+**Example**
+
++---------------------------------------------------------------------------------------+
+| GET *https://{subdomain}.zent.io/api/v1/stream?apikey={api_key}&page=1&page_size=10*  |
++---------------------------------------------------------------------------------------+
+
+**Parameters**
+
+ =========  ========  ======================================================================================================
+ Name       Required  Description
+ =========  ========  ======================================================================================================
+ page          yes    The result's page. 
+ page_size     no     The result's page size. Defaults to 10.   
+ =========  ========  ======================================================================================================
+
+**Response Sample**
+
+::
+
+    [
+        {
+            "id":"54652fd83896ed801800000a",
+            "type":1,
+            "message":"My stream message",
+            "from":null,
+            "createdAt":"2014-11-13T17:25:28-05:00",
+            "user":
+            {
+                "id":"5459b0ce3896ed9820000078",
+                "name":"Isabella"
+            }
+        },
+        {
+            "id":"54652fd43896ed8018000009",
+            "type":1,
+            "message":"My test stream message",
+            "from":null,
+            "createdAt":"2014-11-13T17:25:24-05:00",
+            "user":
+            {
+                "id":"5459b0ce3896ed9820000078",
+                "name":"Isabella"
+            }
+        },
+        ...
+    ]
+
+
+
+Create Stream
+-------------
+The endpoint creates a stream for the parameters specified.
+
+**Example**
+
++------------------------------------------------------------------------+
+| POST *https://{subdomain}.zent.io/api/v1/stream/new?apikey={api_key}*  |
++------------------------------------------------------------------------+
+
+**Parameters**
+
+ =========  ========  ======================================================================================================
+ Name       Required  Description
+ =========  ========  ======================================================================================================
+ user          yes    The stream's user id or email.  
+ content       yes    The stream's content. 
+ =========  ========  ======================================================================================================
+
+**Response Sample**
+
+::
+
+    {
+        "id":"546581583896ed8813000002",
+    }
+
+
+
+Reply Stream
+-------------
+The endpoint replies to a stream for the parameters specified.
+
+**Example**
+
++--------------------------------------------------------------------------+
+| POST *https://{subdomain}.zent.io/api/v1/stream/reply?apikey={api_key}*  |
++--------------------------------------------------------------------------+
+
+**Parameters**
+
+ ==========  ========  ======================================================================================================
+ Name        Required  Description
+ ==========  ========  ======================================================================================================
+ user           yes    The stream's reply user id or email.
+ message_id     yes    The stream's id to reply to.
+ content        yes    The stream's reply content.
+ ==========  ========  ======================================================================================================
+
+**Response Sample**
+
+::
+
+    {
+        "id":"546457503896ed5c20000001",
+    }
 
 
 
