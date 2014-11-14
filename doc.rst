@@ -143,9 +143,9 @@ The endpoint creates a customer for the parameters specified.
 
 **Example**
 
-+------------------------------------------------------------------------+
-| POST *https://{subdomain}.zent.io/api/v1/customer/new?apikey={api_key}  |
-+------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+| POST *https://{subdomain}.zent.io/api/v1/customer/new?apikey={api_key}*  |
++--------------------------------------------------------------------------+
 
 **Parameters**
 
@@ -175,9 +175,9 @@ The endpoint updates a customer with the parameters specified.
 
 **Example**
 
-+----------------------------------------------------------------------------+
-| POST *https://{subdomain}.zent.io/api/v1/customer/update?apikey={api_key}  |
-+----------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+| POST *https://{subdomain}.zent.io/api/v1/customer/update?apikey={api_key}*  |
++-----------------------------------------------------------------------------+
 
 **Parameters**
 
