@@ -21,12 +21,12 @@ The endpoint returns customers for the parameters specified.
  =========  ========  ======================================================================================================
  Name       Required  Description
  =========  ========  ======================================================================================================
- name       Yes       The customer's name.
- email      No        The customer's email.  
- phone      No        The customer's phone. 
- page       Yes       The result's page. 
- page_size  No        The result's page size. Defaults to 10.   
- sorting    No        The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.   
+ name       yes       The customer's name.
+ email      no        The customer's email.  
+ phone      no        The customer's phone. 
+ page       yes       The result's page. 
+ page_size  no        The result's page size. Defaults to 10.   
+ sorting    no        The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.   
  =========  ========  ======================================================================================================
 
 **Response Sample**
@@ -58,6 +58,7 @@ The endpoint returns customers for the parameters specified.
     ]
 
 
+
 Get Customer
 ------------
 The endpoint returns a customer for the parameter specified.
@@ -73,7 +74,7 @@ The endpoint returns a customer for the parameter specified.
  =========  ========  ======================================================================================================
  Name       Required  Description
  =========  ========  ======================================================================================================
- customer   Yes       The customer's id or the customer's email.
+ customer   yes       The customer's id or the customer's email.
  =========  ========  ======================================================================================================
 
 **Response Sample**
@@ -92,6 +93,44 @@ The endpoint returns a customer for the parameter specified.
     }
 
 
+
 Get Customer Stories
 --------------------
 The endpoint returns the customer stories for the parameters specified.
+
+**Example**
+
++----------------------------------------------------------------------------------------------------------+
+| GET *https://{subdomain}.zent.io/api/v1/customer/search?apikey={api_key}&name=jhon&page=1&page_size=10*  |
++----------------------------------------------------------------------------------------------------------+
+
+**Parameters**
+
+ =========  ========  ======================================================================================================
+ Name       Required  Description
+ =========  ========  ======================================================================================================
+ customer   yes       The customer's id or the customer's email.
+ page       yes       The result's page.
+ page_size  no        The result's page size. Defaults to 10.
+ sorting    no        The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.
+ =========  ========  ======================================================================================================
+
+**Response Sample**
+
+::
+
+    [
+        {
+            "id":"546466313896ed7c21000000",
+            "state":0,
+            "subject":"My story subject",
+            "createdAt":"2014-11-13T03:05:05-05:00"
+        },
+        {
+            "id":"54646c653896ed1023000000",
+            "state":0,
+            "subject":"My story subject",
+            "createdAt":"2014-11-13T03:31:33-05:00"
+        },
+        ...
+    ]
