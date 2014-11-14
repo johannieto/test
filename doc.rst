@@ -257,14 +257,105 @@ The endpoint returns chat statistics for the parameters specified.
 
 
 
+Get Email Statistics
+--------------------
+The endpoint returns email statistics for the parameters specified. 
+
+**Example**
+
++---------------------------------------------------------------------------------------------------------------------+
+| GET *https://{subdomain}.zent.io/api/v1/statistic/email/{section}?apikey={api_key}&start=2014-09-16&end=2014-09-20*  |
++---------------------------------------------------------------------------------------------------------------------+
+
+**Parameters**
+
+ =========  ========  ==================================================================================================================
+ Name       Required  Description
+ =========  ========  ==================================================================================================================
+ section       yes    The section for the query. Possible values are *general*, *quality*, *service_level* and *reviews*. 
+ start         yes    The start date for the query. It must be a ISO 8601 date. For example: 2014-09-16.
+ end           yes    The end date for the query. It must be a ISO 8601 date. For example: 2014-09-20.
+ user          no     The user's id or email.
+ =========  ========  ==================================================================================================================
+
+**Response Sample**
+
+::
+
+    [
+        {
+            "label":"EMAIL_NUMBER",
+            "day":"2014-09-16",
+            "value":107,
+            "user":
+            {
+                "id":"5459b0ce3896ed9820000078",
+                "name":"Isabella",
+            }
+        },
+        {
+            "label":"EMAIL_NUMBER",
+            "day":"2014-09-16",
+            "value":219,
+            "user":
+            {
+                "id":"5459b0ce3896ed9820000079",
+                "name":"Jacob",
+            }
+        },
+        ...
+    ]
 
 
 
+Get Voice Statistics
+--------------------
+The endpoint returns voice statistics for the parameters specified. 
 
+**Example**
 
++----------------------------------------------------------------------------------------------------------------------+
+| GET *https://{subdomain}.zent.io/api/v1/statistic/voice/{section}?apikey={api_key}&start=2014-09-16&end=2014-09-20*  |
++----------------------------------------------------------------------------------------------------------------------+
 
+**Parameters**
 
+ =========  ========  ==================================================================================================================
+ Name       Required  Description
+ =========  ========  ==================================================================================================================
+ section       yes    The section for the query. Possible values are *general*, *performance*, *quality*, *service_level* and *reviews*. 
+ start         yes    The start date for the query. It must be a ISO 8601 date. For example: 2014-09-16.
+ end           yes    The end date for the query. It must be a ISO 8601 date. For example: 2014-09-20.
+ user          no     The user's id or email.
+ =========  ========  ==================================================================================================================
 
+**Response Sample**
+
+::
+
+    [
+        {
+            "label":"VOICE_AVERAGE_DURATION",
+            "day":"2014-09-16",
+            "value":501,
+            "user":
+            {
+                "id":"5459b0ce3896ed9820000078",
+                "name":"Isabella",
+            }
+        },
+        {
+            "label":"VOICE_AVERAGE_DURATION",
+            "day":"2014-09-16",
+            "value":342,
+            "user":
+            {
+                "id":"5459b0ce3896ed9820000079",
+                "name":"Jacob",
+            }
+        },
+        ...
+    ]
 
 
 
@@ -377,8 +468,8 @@ The endpoint creates a story for the parameters specified.
 
 
 
-Add Note to Story
------------------
+Add Story Note
+--------------
 The endpoint creates a note for a story based on the parameters specified.
 
 **Example**
@@ -468,7 +559,7 @@ Streams End Points
 ==================
 
 Get Streams
---------------
+-----------
 The endpoint returns streams for the parameters specified. 
 
 **Example**
