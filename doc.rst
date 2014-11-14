@@ -29,15 +29,15 @@ The endpoint returns customers for the parameters specified.
  sorting    No        The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.   
  =========  ========  ======================================================================================================
 
-**Response Example**
+**Response Sample**
 
 ::
 
     [
         {
             "id":"54652afd3896ede40a000000",
-            "name":"Jhon Doe",
-            "surname":null,
+            "name":"Jhon",
+            "surname":"Doe",
             "email":"jhon@gmail.com",
             "phone":"88888888888",
             "createdAt":"2014-11-13T17:04:45-05:00",
@@ -46,17 +46,52 @@ The endpoint returns customers for the parameters specified.
         },
         {
             "id":"54652f6f3896ed8018000000",
-            "name":"Marissa Mayer",
-            "surname":null,
+            "name":"Marissa",
+            "surname":"Mayer",
             "email":"marissa@gmail.com",
             "phone":"9999999999999",
             "createdAt":"2014-11-13T17:23:43-05:00",
             "updatedAt":"2014-11-13T17:23:43-05:00",
             "customAttributes":[]
-        }
+        },
+        ...
     ]
 
 
 Get Customer
-----------------
-The endpoint returns customers for the parameters specified. 
+------------
+The endpoint returns a customer for the parameter specified.
+
+**Example**
+
++-------------------------------------------------------------------------------------------------------+
+| GET *https://{subdomain}.zent.io/api/v1/customer?apikey={api_key}&customer=54652afd3896ede40a000000*  |
++-------------------------------------------------------------------------------------------------------+
+
+**Parameters**
+
+ =========  ========  ======================================================================================================
+ Name       Required  Description
+ =========  ========  ======================================================================================================
+ customer   Yes       The customer's id or the customer's email.
+ =========  ========  ======================================================================================================
+
+**Response Sample**
+
+::
+
+    {
+        "id":"54652afd3896ede40a000000",
+        "name":"Jhon",
+        "surname":"Doe",
+        "email":"jhon@gmail.com",
+        "phone":"88888888888",
+        "createdAt":"2014-11-13T17:04:45-05:00",
+        "updatedAt":"2014-11-13T17:23:46-05:00",
+        "customAttributes":[]
+    }
+
+
+Get Customer Stories
+--------------------
+The endpoint returns the customer stories for the parameters specified.
