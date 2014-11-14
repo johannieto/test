@@ -21,12 +21,12 @@ The endpoint returns customers for the parameters specified.
  =========  ========  ======================================================================================================
  Name       Required  Description
  =========  ========  ======================================================================================================
- name       yes       The customer's name.
- email      no        The customer's email.  
- phone      no        The customer's phone. 
- page       yes       The result's page. 
- page_size  no        The result's page size. Defaults to 10.   
- sorting    no        The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.   
+ name          yes    The customer's name.
+ email         no     The customer's email.  
+ phone         no     The customer's phone. 
+ page          yes    The result's page. 
+ page_size     no     The result's page size. Defaults to 10.   
+ sorting       no     The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.   
  =========  ========  ======================================================================================================
 
 **Response Sample**
@@ -74,7 +74,7 @@ The endpoint returns a customer for the parameter specified.
  =========  ========  ======================================================================================================
  Name       Required  Description
  =========  ========  ======================================================================================================
- customer   yes       The customer's id or the customer's email.
+ customer      yes    The customer's id or the customer's email.
  =========  ========  ======================================================================================================
 
 **Response Sample**
@@ -109,10 +109,10 @@ The endpoint returns the customer stories for the parameters specified.
  =========  ========  ======================================================================================================
  Name       Required  Description
  =========  ========  ======================================================================================================
- customer   yes       The customer's id or the customer's email.
- page       yes       The result's page.
- page_size  no        The result's page size. Defaults to 10.
- sorting    no        The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.
+ customer      yes    The customer's id or the customer's email.
+ page          yes    The result's page.
+ page_size     no     The result's page size. Defaults to 10.
+ sorting       no     The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.
  =========  ========  ======================================================================================================
 
 **Response Sample**
@@ -134,3 +134,9 @@ The endpoint returns the customer stories for the parameters specified.
         },
         ...
     ]
+
+
+
+Create Customer
+---------------
+The endpoint creates a customer for the parameters specified.
