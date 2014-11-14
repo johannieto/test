@@ -140,3 +140,64 @@ The endpoint returns the customer stories for the parameters specified.
 Create Customer
 ---------------
 The endpoint creates a customer for the parameters specified.
+
+**Example**
+
++------------------------------------------------------------------------+
+| POST *https://{subdomain}.zent.io/api/v1/customer/new?apikey={api_key}  |
++------------------------------------------------------------------------+
+
+**Parameters**
+
+ =========  ========  ======================================================================================================
+ Name       Required  Description
+ =========  ========  ======================================================================================================
+ name          yes    The customer's name.
+ email         yes    The customer's email.  
+ phone         yes    The customer's phone. 
+ address       yes    The customer's address. 
+ tags          no     The customer's tags.
+ =========  ========  ======================================================================================================
+
+**Response Sample**
+
+::
+
+    {
+        "id":"546581583896ed8813000002",
+    }
+
+
+
+Update Customer
+---------------
+The endpoint updates a customer with the parameters specified.
+
+**Example**
+
++----------------------------------------------------------------------------+
+| POST *https://{subdomain}.zent.io/api/v1/customer/update?apikey={api_key}  |
++----------------------------------------------------------------------------+
+
+**Parameters**
+
+ =========  ========  ======================================================================================================
+ Name       Required  Description
+ =========  ========  ======================================================================================================
+ customer      yes    The customer's id or the customer's email.
+ name          yes    The customer's name.
+ email         yes    The customer's email.  
+ phone         yes    The customer's phone. 
+ address       yes    The customer's address. 
+ tags          no     The customer's tags.
+ =========  ========  ======================================================================================================
+
+**Response Sample**
+
+::
+
+    {
+        "id":"546581583896ed8813000002",
+    }
+
+
