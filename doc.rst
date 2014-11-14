@@ -164,7 +164,7 @@ The endpoint creates a customer for the parameters specified.
 ::
 
     {
-        "id":"546581583896ed8813000002",
+        "id":"546581583896ed8813000002"
     }
 
 
@@ -197,8 +197,74 @@ The endpoint updates a customer with the parameters specified.
 ::
 
     {
-        "id":"546581583896ed8813000002",
+        "id":"546581583896ed8813000002"
     }
+
+
+
+
+Statistics End Points
+=====================
+
+Get Chat Statistics
+-------------------
+The endpoint returns chat statistics for the parameters specified. 
+
+**Example**
+
++---------------------------------------------------------------------------------------------------------------------+
+| GET *https://{subdomain}.zent.io/api/v1/statistic/chat/{section}?apikey={api_key}&start=2014-09-16&end=2014-09-20*  |
++---------------------------------------------------------------------------------------------------------------------+
+
+**Parameters**
+
+ =========  ========  ==================================================================================================================
+ Name       Required  Description
+ =========  ========  ==================================================================================================================
+ section       yes    The section for the query. Possible values are *general*, *performance*, *quality*, *service_level* and *reviews*. 
+ start         yes    The start date for the query. It must be a ISO 8601 date. For example: 2014-09-16.
+ end           yes    The end date for the query. It must be a ISO 8601 date. For example: 2014-09-20.
+ user          no     The user's id or email.
+ =========  ========  ==================================================================================================================
+
+**Response Sample**
+
+::
+
+    [
+        {
+            "label":"CHAT_AVERAGE_DURATION",
+            "day":"2014-09-16",
+            "value":329,
+            "user":
+            {
+                "id":"5459b0ce3896ed9820000078",
+                "name":"Isabella",
+            }
+        },
+        {
+            "label":"CHAT_AVERAGE_DURATION",
+            "day":"2014-09-16",
+            "value":257,
+            "user":
+            {
+                "id":"5459b0ce3896ed9820000079",
+                "name":"Jacob",
+            }
+        },
+        ...
+    ]
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -306,7 +372,7 @@ The endpoint creates a story for the parameters specified.
 ::
 
     {
-        "id":"546581583896ed8813000002",
+        "id":"546581583896ed8813000002"
     }
 
 
@@ -335,7 +401,7 @@ The endpoint creates a note for a story based on the parameters specified.
 ::
 
     {
-        "id":"54652f6f3896ed8018000000",
+        "id":"54652f6f3896ed8018000000"
     }
 
 
@@ -363,7 +429,7 @@ The endpoint closes a story for the parameter specified.
 ::
 
     {
-        "id":"546581583896ed8813000002",
+        "id":"546581583896ed8813000002"
     }
 
 
@@ -392,7 +458,7 @@ The endpoint reassigns a story to another user for the parameters specified.
 ::
 
     {
-        "id":"546581583896ed8813000002",
+        "id":"546581583896ed8813000002"
     }
 
 
@@ -478,7 +544,7 @@ The endpoint creates a stream for the parameters specified.
 ::
 
     {
-        "id":"546581583896ed8813000002",
+        "id":"546581583896ed8813000002"
     }
 
 
@@ -508,7 +574,7 @@ The endpoint replies to a stream for the parameters specified.
 ::
 
     {
-        "id":"546457503896ed5c20000001",
+        "id":"546457503896ed5c20000001"
     }
 
 
